@@ -34,17 +34,17 @@ class Login extends Component {
         return (
             <div className="form-container">
                 <form onSubmit={this.onSubmit}>
-                    <div>
-                        <label>UserName: </label> <br/>
+                    {/* <div>
+                        <label>UserName: </label>
                         <input type="text" name="username" onChange={this.onChange} value={this.state.username}/>
+                    </div> */}
+                    <div>
+                        <label>Email: </label>
+                        <input type="text" name="email" onChange={this.onChange} value={this.state.email}/>
                     </div>
                     <div>
-                        <label>Email: </label> <br/>
-                        <textarea name="email" onChange={this.onChange} value={this.state.email}/>
-                    </div>
-                    <div>
-                        <label>Password: </label> <br/>
-                        <textarea name="password" onChange={this.onChange} value={this.state.password}/>
+                        <label>Password: </label>
+                        <input type="password" name="password" onChange={this.onChange} value={this.state.password}/>
                     </div>
                     <div>
                         <button type="submit">submit</button>
@@ -56,7 +56,8 @@ class Login extends Component {
 }
 
 Login.propTypes = {
-    authenticate: PropTypes.func.isRequired
+    authenticate: PropTypes.func.isRequired,
+    user: PropTypes.object
 };
 
 export default connect(null, {authenticate})(Login)

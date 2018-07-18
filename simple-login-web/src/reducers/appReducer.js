@@ -1,21 +1,17 @@
-import { AUTH, FETCH_USER} from "../actions/types";
+import { AUTH, FETCH_GIT_DETAILS } from "../actions/types";
 
-const initialState = {
-    user: {}
-};
+const initialState = {};
 
-export default function (state=initialState, action) {
+export default function (state = initialState, action) {
     switch (action.type) {
         case AUTH:
-            return {
-                state: state,
+            return Object.assign({}, state, {
                 user: action.payload
-            };
-        case FETCH_USER:
-            return {
-                state: state,
-                user: action.payload
-            };
+            });
+        case FETCH_GIT_DETAILS:
+            return Object.assign({}, state, {
+                git: action.payload
+            });
         default: return state;
     }
 }

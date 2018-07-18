@@ -1,2 +1,2 @@
 export const AUTH = 'AUTH';
-export const FETCH_USER = 'FETCH_USER';
+export const FETCH_GIT_DETAILS = 'FETCH_GIT_DETAILS';
