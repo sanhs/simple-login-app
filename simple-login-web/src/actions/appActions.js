@@ -1,7 +1,7 @@
 import { AUTH, FETCH_USER} from "./types";
 
-export const authenticate = () => dispatch => {
-
+export const authenticate = (post) => dispatch => {
+    
 };
 
 export const fetchUser = (user) => dispatch => {

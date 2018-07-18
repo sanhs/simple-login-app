@@ -17,6 +17,6 @@ const Root = ({store}) => {
 
 Root.propTypes = {
     store: PropTypes.object.isRequired
-}
+};
 
 export default Root;
