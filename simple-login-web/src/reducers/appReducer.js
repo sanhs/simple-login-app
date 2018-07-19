@@ -1,8 +1,6 @@
 import { AUTH, FETCH_GIT_DETAILS } from "../actions/types";
 
-const initialState = {};
-
-export default function (state = initialState, action) {
+export default function (state = {}, action) {
     switch (action.type) {
         case AUTH:
             return Object.assign({}, state, {

@@ -26,6 +26,8 @@ class App extends Component {
       );
     });
 
+
+
     return (
       <div className="App">
         <Main />
@@ -36,13 +38,13 @@ class App extends Component {
 
 App.proptypes = {
   user: PropTypes.object.isRequired
-}
+};
 
 const mapStateToProps = state => {
-  console.log(state);
+  console.log(state.app);
   return ({
-    user: state.user,
+    user: state.app.user,
   });
-}
+};
 
 export default App;
